@@ -1,6 +1,6 @@
-# Authentication and Authorization System
+# Authentication System
 
-A full-stack authentication system with user registration, login, and password reset functionality.
+A Basic authentication system with user registration, login, and password reset functionality.
 
 ## Project Structure
 
@@ -21,11 +21,10 @@ authentication andauthorisation/
 │   ├── public/           # Static assets
 │   └── src/              # React components and code
 ├── results/              # Project screenshots
-│   ├── Registerpage.jpg
-│   ├── loginpage.jpg
-│   ├── resetpasswordpge.jpg
-│   └── welcomepage.jpg
-└── .gitignore            # Git ignore file
+│   ├── Registerpage.jpg             # User registration form with  fields for name, email, and password
+│   ├── loginpage.jpg             # User login form with fields for email and password
+│   ├── resetpasswordpge.jpg             # Password reset form with fields for email and new password
+│   └── welcomepage.jpg             # Welcome page after successful login
 ```
 
 ## Features
@@ -33,7 +32,6 @@ authentication andauthorisation/
 - User Registration
 - User Login
 - Password Reset
-- JWT Authentication
 - Input Validation
 - Error Handling
 - Database Integration
@@ -98,35 +96,17 @@ npm start
 - `POST /api/auth/reset-password` - Reset user password
 - `GET /api/health` - Health check endpoint
 
-## Security Features
-
-- Password hashing (using bcryptjs)
-- JWT token-based authentication
-- Input validation
-- Error handling middleware
-- CORS configuration
-- Environment-based configuration
-
 ## Database
 
 The project uses MySQL database with Sequelize ORM. The database schema includes:
 
 - Users table with fields: id, name, email, password
-- Email validation and uniqueness constraints
-- Password hashing
 
-## Contributing
+## Project Screenshots
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+The `results` directory contains screenshots of the application's main pages:
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Support
-
-For support, email support@example.com or create an issue in the repository.
+- [Registerpage.jpg](cci:7://file:///c:/Users/Ayush%20Verma/Desktop/authentication%20andauthorisation/results/Registerpage.jpg:0:0-0:0): User registration form with fields for name, email, and password
+- [loginpage.jpg](cci:7://file:///c:/Users/Ayush%20Verma/Desktop/authentication%20andauthorisation/results/loginpage.jpg:0:0-0:0): Login page with email and password fields, and "Forgot Password?" link
+- [resetpasswordpge.jpg](cci:7://file:///c:/Users/Ayush%20Verma/Desktop/authentication%20andauthorisation/results/resetpasswordpge.jpg:0:0-0:0): Password reset page for users who have forgotten their password
+- [welcomepage.jpg](cci:7://file:///c:/Users/Ayush%20Verma/Desktop/authentication%20andauthorisation/results/welcomepage.jpg:0:0-0:0): Welcome page shown after successful login
