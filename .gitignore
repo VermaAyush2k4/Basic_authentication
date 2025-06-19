@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build output
+build/
+dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+
+# Backend specific
+backend/build/
+backend/dist/
+backend/node_modules/
+backend/.env
+
+# Frontend specific
+frontend/build/
+frontend/dist/
+frontend/node_modules/
+frontend/.env
+
+# Database
+*.sqlite3
+*.db
+
+# Screenshots (since they're in results directory)
+results/*.jpg
+
+# Debug files
+*.debug
+*.log
+
+# Temporary files
+*.tmp
+*.temp
