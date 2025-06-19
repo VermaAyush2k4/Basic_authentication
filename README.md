@@ -104,9 +104,16 @@ The project uses MySQL database with Sequelize ORM. The database schema includes
 
 ## Project Screenshots
 
-The `results` directory contains screenshots of the application's main pages:
+### Screenshots
 
-- [Registerpage.jpg](cci:7://file:///c:/Users/Ayush%20Verma/Desktop/authentication%20andauthorisation/results/Registerpage.jpg:0:0-0:0): User registration form with fields for name, email, and password
-- [loginpage.jpg](cci:7://file:///c:/Users/Ayush%20Verma/Desktop/authentication%20andauthorisation/results/loginpage.jpg:0:0-0:0): Login page with email and password fields, and "Forgot Password?" link
-- [resetpasswordpge.jpg](cci:7://file:///c:/Users/Ayush%20Verma/Desktop/authentication%20andauthorisation/results/resetpasswordpge.jpg:0:0-0:0): Password reset page for users who have forgotten their password
-- [welcomepage.jpg](cci:7://file:///c:/Users/Ayush%20Verma/Desktop/authentication%20andauthorisation/results/welcomepage.jpg:0:0-0:0): Welcome page shown after successful login
+![Register Page](./results/Registerpage.jpg)
+User registration form with fields for name, email, and password
+
+![Login Page](./results/loginpage.jpg)
+User login form with email and password fields, and "Forgot Password?" link
+
+![Password Reset Page](./results/resetpasswordpge.jpg)
+Password reset form with fields for email and new password
+
+![Welcome Page](./results/welcomepage.jpg)
+Welcome page shown after successful login
