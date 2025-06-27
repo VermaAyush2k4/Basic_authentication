@@ -46,8 +46,6 @@ frontend/.env
 *.sqlite3
 *.db
 
-# Screenshots (since they're in results directory)
-results/*.jpg
 
 # Debug files
 *.debug
