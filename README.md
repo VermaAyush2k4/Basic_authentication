@@ -36,6 +36,23 @@ authentication andauthorisation/
 - Error Handling
 - Database Integration
 
+## Password Requirements
+
+To ensure account security, all passwords must meet the following requirements:
+
+1. Minimum Length: At least 8 characters
+2. Character Types:
+   - At least one uppercase letter (A-Z)
+   - At least one lowercase letter (a-z)
+   - At least one number (0-9)
+   - At least one special character (e.g., !@#$%^&*(),.?":{}|<>)
+
+These requirements apply to:
+- New user registration
+- Password reset
+
+The system will validate passwords against these requirements and provide clear error messages if the password doesn't meet the criteria.
+
 ## Prerequisites
 
 - Node.js (v14 or higher)

@@ -97,12 +97,22 @@ router.post('/register', async (req, res) => {
       });
     }
 
-    // Validate password length
-    if (password.length < 6) {
+    // Validate password length and strength
+    if (typeof password !== 'string' || password.length < 8) {
       console.log('Registration failed - password too short');
-      return res.status(400).json({
-        success: false,
-        message: 'Password must be at least 6 characters long'
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Password must be at least 8 characters long' 
+      });
+    }
+
+    // Validate password strength
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).+$/;
+    if (!passwordRegex.test(password)) {
+      console.log('Registration failed - weak password');
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character' 
       });
     }
 
@@ -225,12 +235,22 @@ router.post('/reset-password', async (req, res) => {
       });
     }
 
-    // Validate password length
-    if (password.length < 6) {
+    // Validate password length and strength
+    if (typeof password !== 'string' || password.length < 8) {
       console.log('Password reset failed - password too short');
       return res.status(400).json({
         success: false,
-        message: 'New password must be at least 6 characters long'
+        message: 'New password must be at least 8 characters long'
+      });
+    }
+
+    // Validate password strength
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).+$/;
+    if (!passwordRegex.test(password)) {
+      console.log('Password reset failed - weak password');
+      return res.status(400).json({
+        success: false,
+        message: 'New password must contain at least one uppercase letter, one lowercase letter, one number, and one special character'
       });
     }
 

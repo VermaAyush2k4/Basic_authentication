@@ -24,7 +24,33 @@ const User = sequelize.define('User', {
   },
   password: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      len: [8, 100], // Minimum length of 8 characters
+      isStrongPassword(value) {
+        if (!value) return;
+        
+        // Check for uppercase letter
+        if (!/[A-Z]/.test(value)) {
+          throw new Error('Password must contain at least one uppercase letter');
+        }
+        
+        // Check for lowercase letter
+        if (!/[a-z]/.test(value)) {
+          throw new Error('Password must contain at least one lowercase letter');
+        }
+        
+        // Check for numeric digit
+        if (!/[0-9]/.test(value)) {
+          throw new Error('Password must contain at least one number');
+        }
+        
+        // Check for special character
+        if (!/[!@#$%^&*(),.?":{}|<>]/.test(value)) {
+          throw new Error('Password must contain at least one special character');
+        }
+      }
+    }
   },
   resetPasswordToken: {
     type: DataTypes.STRING,
